@@ -1,6 +1,6 @@
-# MTStore Authentication
+# MTStore Notification
 
-Authentication API for MTStore platform.
+Notification API for MTStore platform.
 
 ## 🚀 Starting
 
@@ -24,29 +24,6 @@ set PATH=%M2%; %PATH%
 ```
 
 * [Intellij 2021.3.2 (Comunity Edition) +](https://www.jetbrains.com/pt-br/idea/download)
-* [Kafka](https://kafka.apache.org/quickstart) 
-
-
-```
-Windows
-
-Edite: %KAFKA_HOME%\config\server.properties
-zookeeper.connection.timeout.ms=60000
-#broker.id=0
-log.dirs=/kafka_2.13-3.1.0/data/kafka
-
-Edite: %KAFKA_HOME%\config\zookeeper.properties
-dataDir=/kafka_2.13-3.1.0/data/zookeeper
-```
-
-```
-set KAFKA_HOME=C:\kafka_2.13-3.1.0
-set PATH = %KAFKA_HOME%; %PATH%
-%KAFKA_HOME%\bin\windows\zookeeper-server-start.bat %KAFKA_HOME%\config\zookeeper.properties
-%KAFKA_HOME%\bin\windows\kafka-server-start.bat %KAFKA_HOME%\config\server.properties
-```
-
-* [Git](https://gitforwindows.org/)
 * [Postman](https://www.postman.com/downloads/)
 
 ### 🔧 Instalação
