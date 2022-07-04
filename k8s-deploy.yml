@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mts-notification-deploy
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: mts-notification-pod
+      labels:
+        app: mts-notification
+    spec:
+      containers:
+        - name: mts-notification-ctn
+          image: rodsordi/mts-notification
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: mts-log-vol
+              mountPath: /app/log/
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+
+      volumes:
+        - name: mts-log-vol
+          hostPath:
+            type: Directory
+            path: /D/mt-volumes/app-logs
+
+  selector:
+    matchLabels:
+      app: mts-notification
