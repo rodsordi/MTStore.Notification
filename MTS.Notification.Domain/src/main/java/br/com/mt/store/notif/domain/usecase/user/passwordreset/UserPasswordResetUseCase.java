@@ -1,16 +1,16 @@
-package br.com.mt.store.notif.domain.usecase.user.creation;
+package br.com.mt.store.notif.domain.usecase.user.passwordreset;
 
 import br.com.mt.store.commons.domain.BusinessException;
 import br.com.mt.store.notif.domain.Email;
 import br.com.mt.store.notif.domain.User;
-import br.com.mt.store.notif.domain.outputport.SendEmailOutputPort;
 import br.com.mt.store.notif.domain.outputport.SaveEmailOutputPort;
+import br.com.mt.store.notif.domain.outputport.SendEmailOutputPort;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Optional;
 
 @RequiredArgsConstructor
-public class UserCreationUseCase {
+public class UserPasswordResetUseCase {
 
     private final SendEmailOutputPort sendEmailOutputPort;
 
@@ -30,7 +30,7 @@ public class UserCreationUseCase {
         email.setFrom("sender@email.com");
 
         email.setTo(user.getEmail());
-        email.setSubject("notif.user.creation.subject");
+        email.setSubject("notif.user.password_reset.subject");
         email.setContent("Layout load");
         return email;
     }

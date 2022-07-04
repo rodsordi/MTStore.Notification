@@ -10,3 +10,4 @@ public interface EmailDTOMapper {
     EmailDTO.Response convert(Email email);
 
 }
+

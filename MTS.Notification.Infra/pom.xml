@@ -26,6 +26,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>br.com.mt</groupId>
+            <artifactId>MTS.Commons.App</artifactId>
+            <version>${mts.commons.version}</version>
+        </dependency>
+
         <!-- Tools -->
         <dependency>
             <groupId>org.mapstruct</groupId>

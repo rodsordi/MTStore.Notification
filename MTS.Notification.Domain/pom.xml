@@ -11,6 +11,14 @@
 
     <artifactId>MTS.Notification.Domain</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>br.com.mt</groupId>
+            <artifactId>MTS.Commons.Domain</artifactId>
+            <version>${mts.commons.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <finalName>MTS.Notification.Domain</finalName>
         <sourceDirectory>src/main/java</sourceDirectory>
