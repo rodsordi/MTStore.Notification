@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>br.com.mt</groupId>
-            <artifactId>MTStore.Commons.App</artifactId>
+            <artifactId>MTS.Commons.App</artifactId>
             <version>${mts.commons.version}</version>
         </dependency>
 
