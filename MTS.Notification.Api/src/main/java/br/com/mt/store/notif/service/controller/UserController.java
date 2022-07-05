@@ -1,10 +1,10 @@
-package br.com.mt.store.notif.app.controller;
+package br.com.mt.store.notif.service.controller;
 
 import br.com.mt.store.commons.app.exception.RestException;
-import br.com.mt.store.notif.app.dto.EmailDTO;
-import br.com.mt.store.notif.app.dto.UserDTO;
-import br.com.mt.store.notif.app.inputadapter.UserCreationInputAdapter;
-import br.com.mt.store.notif.app.inputadapter.UserPasswordResetInputAdapter;
+import br.com.mt.store.notif.service.dto.EmailDTO;
+import br.com.mt.store.notif.service.dto.UserDTO;
+import br.com.mt.store.notif.service.inputadapter.UserCreationInputAdapter;
+import br.com.mt.store.notif.service.inputadapter.UserPasswordResetInputAdapter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ResourceBundleMessageSource;

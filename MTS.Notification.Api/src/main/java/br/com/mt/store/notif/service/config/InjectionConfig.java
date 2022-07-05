@@ -1,4 +1,4 @@
-package br.com.mt.store.notif.app.config;
+package br.com.mt.store.notif.service.config;
 
 import br.com.mt.store.notif.domain.outputport.SaveEmailOutputPort;
 import br.com.mt.store.notif.domain.outputport.SendEmailOutputPort;

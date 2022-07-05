@@ -1,6 +1,6 @@
-package br.com.mt.store.notif.app.mapper;
+package br.com.mt.store.notif.service.mapper;
 
-import br.com.mt.store.notif.app.dto.UserDTO;
+import br.com.mt.store.notif.service.dto.UserDTO;
 import br.com.mt.store.notif.domain.User;
 import org.mapstruct.Mapper;
 

@@ -1,4 +1,4 @@
-package br.com.mt.store.notif.app.config;
+package br.com.mt.store.notif.service.config;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package br.com.mt.store.notif.app.dto;
+package br.com.mt.store.notif.service.dto;
 
 import br.com.mt.store.commons.app.dto.Localizable;
 import lombok.Getter;

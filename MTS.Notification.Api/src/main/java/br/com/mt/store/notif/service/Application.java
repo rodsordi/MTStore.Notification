@@ -1,4 +1,4 @@
-package br.com.mt.store.notif.app;
+package br.com.mt.store.notif.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

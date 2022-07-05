@@ -17,7 +17,7 @@
 
     <modules>
         <module>MTS.Notification.Domain</module>
-        <module>MTS.Notification.App</module>
+        <module>MTS.Notification.Api</module>
         <module>MTS.Notification.Infra</module>
     </modules>
 

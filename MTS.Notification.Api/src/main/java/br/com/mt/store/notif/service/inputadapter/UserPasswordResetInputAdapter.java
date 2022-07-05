@@ -1,9 +1,9 @@
-package br.com.mt.store.notif.app.inputadapter;
+package br.com.mt.store.notif.service.inputadapter;
 
-import br.com.mt.store.notif.app.dto.EmailDTO;
-import br.com.mt.store.notif.app.dto.UserDTO;
-import br.com.mt.store.notif.app.mapper.EmailDTOMapper;
-import br.com.mt.store.notif.app.mapper.UserDTOMapper;
+import br.com.mt.store.notif.service.dto.EmailDTO;
+import br.com.mt.store.notif.service.dto.UserDTO;
+import br.com.mt.store.notif.service.mapper.EmailDTOMapper;
+import br.com.mt.store.notif.service.mapper.UserDTOMapper;
 import br.com.mt.store.notif.domain.Email;
 import br.com.mt.store.notif.domain.User;
 import br.com.mt.store.notif.domain.usecase.user.passwordreset.UserPasswordResetInputPort;

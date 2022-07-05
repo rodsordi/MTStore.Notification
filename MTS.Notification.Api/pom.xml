@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>MTS.Notification.App</artifactId>
+    <artifactId>MTS.Notification.Service</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -63,7 +63,7 @@
     </dependencies>
 
     <build>
-        <finalName>MTS.Notification.App</finalName>
+        <finalName>MTS.Notification.Service</finalName>
 
         <sourceDirectory>src/main/java</sourceDirectory>
         <resources>
