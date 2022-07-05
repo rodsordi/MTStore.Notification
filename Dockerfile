@@ -2,7 +2,7 @@ FROM openjdk:17-alpine
 
 RUN mkdir -p app
 
-COPY ./MTS.Notification.SpringApp/target/MTS.Notification.App.jar /app
+COPY ./MTS.Notification.App/target/MTS.Notification.App.jar /app
 
 WORKDIR /app
 
