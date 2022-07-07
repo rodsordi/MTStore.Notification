@@ -8,4 +8,4 @@ WORKDIR /app
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "MTS.Notification.App.jar"]
+CMD ["java", "-jar", "MTS.Notification.App.jar", "-Dspring.profiles.active=$env"]
