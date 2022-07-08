@@ -1,5 +1,6 @@
 package br.com.mt.store.notif.service.config;
 
+import br.com.mt.store.commons.infra.kafka.GsonDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,32 +18,25 @@ import java.util.Map;
 @Configuration
 public class KafkaConsumerConfig {
 
+    public static final String MTS_NOTIFICATION = "MTS_NOTIFICATION";
+
     @Value(value = "${kafka.bootstrapAddress}")
     private String bootstrapAddress;
 
     @Bean
-    public ConsumerFactory<String, String> consumerFactory() {
+    public <T> ConsumerFactory<String, T> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
-        props.put(
-                ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
-                bootstrapAddress);
-        props.put(
-                ConsumerConfig.GROUP_ID_CONFIG,
-                "MTS_USER");
-        props.put(
-                ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,
-                StringDeserializer.class);
-        props.put(
-                ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
-                StringDeserializer.class);
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, MTS_NOTIFICATION);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, GsonDeserializer.class.getName());
+        props.put(GsonDeserializer.CONFIG_VALUE_CLASS, Object.class.getName());
         return new DefaultKafkaConsumerFactory<>(props);
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, String>
-    kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, String> factory =
-                new ConcurrentKafkaListenerContainerFactory<>();
+    public <T> ConcurrentKafkaListenerContainerFactory<String, T> concurrentKafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, T> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         return factory;
     }

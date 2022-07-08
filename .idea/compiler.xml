@@ -20,7 +20,6 @@
         </processorPath>
         <module name="Autenticacao.Infra" />
         <module name="MTS.Notification.Service" />
-        <module name="MTS.Notification.App" />
         <module name="MTS.Notification.Infra" />
         <module name="AutenticacaoZmb.Dominio" />
         <module name="MTS.Auth.Domain" />
@@ -34,6 +33,9 @@
         <module name="Autenticacao.Dominio" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MTS.Notification.App" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
